@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context=".ui.doctor.doctor_profile">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="52dp"
+            android:layout_height="22dp"
+            android:src="@drawable/bac"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+
+            />
+
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:src="@drawable/doctor"
+        android:layout_marginLeft="130dp"
+
+
+        />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="18dp"
+
+        />
+    <TextView
+        android:layout_width="283dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="8dp"
+        android:hint="name"
+        android:textSize="18dp"
+        android:textColor="#878888"
+        android:background="@drawable/hints"
+
+        />
+    <TextView
+        android:layout_width="283dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="25dp"
+        android:hint="phone"
+        android:paddingTop="8dp"
+        android:textSize="18dp"
+        android:textColor="#878888"
+        android:background="@drawable/hints"
+
+        />
+
+    <TextView
+        android:layout_width="283dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:hint="age"
+        android:numeric="decimal"
+        android:textSize="18dp"
+        android:textColor="#878888"
+        android:background="@drawable/hints"
+        android:paddingTop="8dp"
+
+        />
+    <TextView
+        android:layout_width="283dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:hint="address"
+        android:textSize="18dp"
+        android:textColor="#878888"
+        android:background="@drawable/hints"
+        android:paddingTop="8dp"
+
+
+        />
+
+    <TextView
+        android:layout_width="283dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="25dp"
+        android:hint="price"
+        android:numeric="decimal"
+        android:textSize="18dp"
+        android:textColor="#878888"
+        android:background="@drawable/hints"
+        android:paddingTop="8dp"
+        />
+
+    <TextView
+        android:layout_width="283dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:hint="day:             from:        to:"
+        android:textSize="18dp"
+        android:textColor="#878888"
+        android:paddingTop="8dp"
+        android:background="@drawable/hints"
+
+        />
+
+
+    <TextView
+        android:layout_width="283dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:hint="clinck's address"
+        android:textSize="18dp"
+        android:textColor="#878888"
+        android:background="@drawable/hints"
+        android:paddingTop="8dp"
+
+
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:paddingTop="8dp"
+            android:layout_width="283dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="80dp"
+            android:hint="certifications"
+            android:textSize="18dp"
+            android:scrollbarSize="200dp"
+            android:textColor="#878888"
+            android:background="@drawable/hints"
+
+            />
+
+
+
+
+    </FrameLayout>
+
+    <!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp">-->
+
+<!--        <Button-->
+<!--            android:layout_width="120dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="#fff"-->
+<!--            android:background="@drawable/button"-->
+<!--            android:layout_marginLeft="45dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:drawableRight="@drawable/messenger"-->
+<!--            android:paddingEnd="10dp"-->
+<!--            android:text="chat"-->
+<!--            android:fontFamily="cursive"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="18dp"-->
+
+<!--            />-->
+<!--        <Button-->
+<!--            android:layout_width="120dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="#fff"-->
+<!--            android:background="@drawable/button"-->
+<!--            android:layout_marginLeft="47dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:drawableRight="@drawable/call"-->
+<!--            android:paddingEnd="10dp"-->
+<!--            android:text="call"-->
+<!--            android:fontFamily="cursive"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="18dp"-->
+
+<!--            />-->
+
+<!--    </LinearLayout>-->
+
+
+<!--<Button-->
+<!--    android:layout_width="220dp"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:background="@drawable/button"-->
+<!--    android:layout_marginTop="25dp"-->
+<!--    android:layout_marginLeft="75dp"-->
+<!--    android:text="Book"-->
+<!--    android:textColor="#fff"-->
+<!--    android:textSize="20dp"-->
+<!--   android:fontFamily="cursive"-->
+<!--    android:textStyle="bold"-->
+
+
+
+<!--    />-->
+
+
+
+</LinearLayout>

@@ -309,27 +309,6 @@
 
     </androidx.cardview.widget.CardView>
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="160dp"
-        android:layout_marginTop="45dp"
-        android:src="@drawable/qr"
-        android:id="@+id/qr"
 
-
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="scan  qr  "
-        android:layout_marginLeft="170dp"
-        android:layout_marginTop="2dp"
-        android:textColor="#E0ECDE"
-        android:textSize="25dp"
-        android:textStyle="bold"
-
-        />
 
 </LinearLayout>

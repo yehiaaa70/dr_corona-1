@@ -28,7 +28,6 @@
         <activity android:name=".ui.logout.register" />
         <activity android:name=".ui.logout.login" />
         <activity android:name=".ui.home.critical_issues" />
-        <activity android:name=".ui.doctor.doctor_profile" />
         <activity android:name=".ui.scannerView" />
 
 

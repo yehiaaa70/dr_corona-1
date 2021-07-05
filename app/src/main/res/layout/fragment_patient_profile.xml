@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#fff"
-    tools:context=".ui.outmenue.patient_profile">
+    tools:context=".ui.patient.patient_profile">
 
     <ImageView
         android:layout_width="52dp"
@@ -146,18 +146,4 @@
         android:background="@drawable/hints"
 
         />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </LinearLayout>

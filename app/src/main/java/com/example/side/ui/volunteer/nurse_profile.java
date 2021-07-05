@@ -1,4 +1,4 @@
-package com.example.side.ui.doctor;
+package com.example.side.ui.volunteer;
 
 import android.os.Bundle;
 
@@ -12,10 +12,10 @@ import com.example.side.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link doctor_profile#newInstance} factory method to
+ * Use the {@link nurse_profile#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class doctor_profile extends Fragment {
+public class nurse_profile extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class doctor_profile extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public doctor_profile() {
+    public nurse_profile() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class doctor_profile extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment doctor_profile.
+     * @return A new instance of fragment nurse_profile.
      */
     // TODO: Rename and change types and number of parameters
-    public static doctor_profile newInstance(String param1, String param2) {
-        doctor_profile fragment = new doctor_profile();
+    public static nurse_profile newInstance(String param1, String param2) {
+        nurse_profile fragment = new nurse_profile();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class doctor_profile extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_doctor_profile, container, false);
+        return inflater.inflate(R.layout.fragment_nurse_profile, container, false);
     }
 }

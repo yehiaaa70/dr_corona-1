@@ -15,7 +15,11 @@
         android:id="@+id/nav_Doctor"
         android:name="com.example.side.ui.doctor.DoctorFragment"
         android:label="@string/Doctor"
-        tools:layout="@layout/fragment_doctor" />
+        tools:layout="@layout/fragment_doctor" >
+        <action
+            android:id="@+id/action_nav_Doctor_to_doctor_profile"
+            app:destination="@id/doctor_profile" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_Volunteer"
@@ -65,4 +69,8 @@
         android:name="com.example.side.ui.logout.LogOutFragment"
         android:label="@string/LogOut"
         tools:layout="@layout/fragment_logout" />
+    <fragment
+        android:id="@+id/doctor_profile"
+        android:name="com.example.side.ui.doctor.doctor_profile"
+        android:label="doctor_profile" />
 </navigation>

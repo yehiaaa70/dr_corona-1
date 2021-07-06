@@ -19,18 +19,20 @@ public class doctorAdapter extends RecyclerView.Adapter<doctorAdapter.ViewHolder
 
     String data[];
     Context context;
+    DoctorInterface doctorInterface;
 
-    public doctorAdapter(Context context, String[] data) {
+    public doctorAdapter(String[] data, Context context, DoctorInterface doctorInterface) {
         this.data = data;
         this.context = context;
+        this.doctorInterface = doctorInterface;
     }
 
     @NonNull
     @Override
     public doctorAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater layoutInflater =LayoutInflater.from(parent.getContext());
-        View view=layoutInflater.inflate(R.layout.custome_design,parent,false);
-        ViewHolder viewHolder=new ViewHolder(view);
+        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+        View view = layoutInflater.inflate(R.layout.custome_design, parent, false);
+        ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
 
@@ -38,12 +40,7 @@ public class doctorAdapter extends RecyclerView.Adapter<doctorAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull doctorAdapter.ViewHolder holder, final int position) {
         holder.textView.setText(data[position]);
-        holder.textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "clicked on"+data[position], Toast.LENGTH_SHORT).show();
-            }
-        });
+
 
     }
 
@@ -52,15 +49,23 @@ public class doctorAdapter extends RecyclerView.Adapter<doctorAdapter.ViewHolder
         return data.length;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView textView;
         ImageView imageView;
-        public ViewHolder (@NonNull View itemView){
+
+        public ViewHolder(@NonNull View itemView) {
 
             super(itemView);
-            textView=itemView.findViewById(R.id.text);
-            imageView=itemView.findViewById(R.id.image);
+            textView = itemView.findViewById(R.id.text);
+            imageView = itemView.findViewById(R.id.image);
+            textView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+//                    Toast.makeText(context, "clicked on" + getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                    doctorInterface.getAdapterPosition(getAdapterPosition());
+                }
+            });
 
         }
 

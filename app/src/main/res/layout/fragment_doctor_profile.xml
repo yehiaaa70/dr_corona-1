@@ -67,10 +67,10 @@
                 android:paddingTop="8dp"
                 android:paddingRight="25dp"
                 android:textColor="#878888"
-
                 android:textSize="18dp" />
 
             <TextView
+                android:id="@+id/doctorPhone_DoctorProfile"
                 android:layout_width="283dp"
                 android:layout_height="45dp"
                 android:layout_marginLeft="55dp"
@@ -85,13 +85,13 @@
                 />
 
             <TextView
+                android:id="@+id/doctorAge_DoctorProfile"
                 android:layout_width="283dp"
                 android:layout_height="45dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/hints"
                 android:hint="age"
-                android:numeric="decimal"
                 android:paddingLeft="25dp"
                 android:paddingTop="8dp"
                 android:paddingRight="25dp"
@@ -101,6 +101,7 @@
                 />
 
             <TextView
+                android:id="@+id/doctorAddress_DoctorProfile"
                 android:layout_width="283dp"
                 android:layout_height="45dp"
                 android:layout_marginLeft="55dp"
@@ -117,6 +118,7 @@
                 />
 
             <TextView
+                android:id="@+id/doctorPrice_DoctorProfile"
                 android:layout_width="283dp"
                 android:layout_height="45dp"
                 android:layout_marginLeft="55dp"
@@ -129,6 +131,7 @@
                 android:textSize="18dp" />
 
             <TextView
+                android:id="@+id/booking_DoctorProfile"
                 android:layout_width="283dp"
                 android:layout_height="45dp"
                 android:layout_marginLeft="55dp"
@@ -145,6 +148,7 @@
 
 
             <TextView
+                android:id="@+id/clincksAddress_DoctorProfile"
                 android:layout_width="283dp"
                 android:layout_height="45dp"
                 android:layout_marginLeft="55dp"
@@ -167,6 +171,7 @@
 
 
                 <TextView
+                    android:id="@+id/certifications_DoctorProfile"
                     android:layout_width="283dp"
                     android:layout_height="50dp"
                     android:layout_marginLeft="55dp"

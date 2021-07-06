@@ -72,5 +72,9 @@
     <fragment
         android:id="@+id/doctor_profile"
         android:name="com.example.side.ui.doctor.doctor_profile"
-        android:label="doctor_profile" />
+        android:label="doctor_profile" >
+        <argument
+            android:name="DoctorProfileData"
+            app:argType="com.example.side.ui.doctor.DoctorModel" />
+    </fragment>
 </navigation>

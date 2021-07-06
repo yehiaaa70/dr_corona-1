@@ -59,8 +59,8 @@
         android:textColor="#fff"
         android:textStyle="italic"
         android:background="@drawable/button"
-        android:id="@+id/sign_in2"
-        android:onClick="login"
+        android:id="@+id/login"
+
 
         />
 

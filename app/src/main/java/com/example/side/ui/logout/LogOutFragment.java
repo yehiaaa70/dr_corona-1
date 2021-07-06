@@ -19,7 +19,7 @@ import com.example.side.ui.hospital.HospitalViewModel;
 
 public class LogOutFragment extends Fragment {
 
-   private LogOutViewModel LogOutViewModel;
+    private LogOutViewModel LogOutViewModel;
 
 
     @Override
@@ -27,35 +27,31 @@ public class LogOutFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         LogOutViewModel = new ViewModelProvider(this).get(LogOutViewModel.class);
-        View view=inflater.inflate(R.layout.fragment_logout, container, false);
+        View view = inflater.inflate(R.layout.fragment_logout, container, false);
 
         Button b1 = (Button) view.findViewById(R.id.sign_up);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-            Intent in=new Intent(getActivity(),register.class);
-            startActivity(in);
+                Intent in = new Intent(getActivity(), register.class);
+                startActivity(in);
             }
 
-         });
+        });
 
         Button b2 = (Button) view.findViewById(R.id.sign_in);
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent in=new Intent(getActivity(),login.class);
+                Intent in = new Intent(getActivity(), login.class);
                 startActivity(in);
             }
 
         });
 
+        return view;
 
-
-
-
-
-return view;
-
-}  }
+    }
+}

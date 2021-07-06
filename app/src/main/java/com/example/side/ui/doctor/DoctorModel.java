@@ -1,6 +1,11 @@
 package com.example.side.ui.doctor;
 
-public class DoctorModel {
+
+import androidx.annotation.Keep;
+
+import java.io.Serializable;
+
+@Keep public class DoctorModel implements Serializable {
     String name;
     String phone;
     int age;

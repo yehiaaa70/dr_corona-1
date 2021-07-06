@@ -14,6 +14,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -36,6 +39,7 @@ public class DoctorFragment extends Fragment implements DoctorInterface {
     doctorAdapter adapter;
 
     FragmentDoctorBinding binding;
+    NavController navController;
 
 
     String name[] = {"Ali", "Hisham", "Mahdi", "Merna", "Mohamed", "Abe El-Mageed"};
@@ -55,71 +59,80 @@ public class DoctorFragment extends Fragment implements DoctorInterface {
         adapter = new doctorAdapter(name, getActivity(), this);
         recyclerView.setAdapter(adapter);
 
+//        NavHostFragment navHostFragment =
+//                (NavHostFragment) requireActivity().getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+//        navController = navHostFragment.getNavController();
+
         return binding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        navController = Navigation.findNavController(view);
         doctorProfile.add(new DoctorModel("Ali",
-                "010000000000",
+                "01000481000",
                 35,
                 "الجيزه الدقي",
                 "300LE",
                 "Day .........",
                 "الجيزة الدقي",
-                "الحلمبوحه في الطب"));
+                "الطب"));
 
         doctorProfile.add(new DoctorModel("Hisham",
-                "010000000000",
+                "0112000000",
                 35,
-                "الجيزه الدقي",
-                "300LE",
+                "مدينه نصر",
+                "350LE",
                 "Day .........",
-                "الجيزة الدقي",
-                "الحلمبوحه في الطب"));
+                "مدينه نصر الزهراء",
+                "الطب"));
 
         doctorProfile.add(new DoctorModel("Mahdi",
-                "010000000000",
-                35,
-                "الجيزه الدقي",
-                "300LE",
+                "0121400000",
+                50,
+                "الشرقية",
+                "500LE",
                 "Day .........",
-                "الجيزة الدقي",
-                "الحلمبوحه في الطب"));
+                "الزقازيق",
+                "الطب"));
 
         doctorProfile.add(new DoctorModel("Merna",
-                "010000000000",
-                35,
-                "الجيزه الدقي",
-                "300LE",
+                "011472000000",
+                40,
+                "الغربية طنطا",
+                "400LE",
                 "Day .........",
-                "الجيزة الدقي",
-                "الحلمبوحه في الطب"));
+                "طنطا",
+                "الطب"));
 
         doctorProfile.add(new DoctorModel("Mohamed",
                 "010000000000",
-                35,
+                48,
                 "الجيزه الدقي",
                 "300LE",
                 "Day .........",
                 "الجيزة الدقي",
-                "الحلمبوحه في الطب"));
+                "الطب"));
 
         doctorProfile.add(new DoctorModel("Abe El-Mageed",
-                "010000000000",
-                35,
-                "الجيزه الدقي",
-                "300LE",
+                "011023000000",
+                37,
+                "الاسكندرية",
+                "450LE",
                 "Day .........",
-                "الجيزة الدقي",
-                "الحلمبوحه في الطب"));
+                "سيدي جابر",
+                "الطب"));
     }
 
     @Override
     public void getAdapterPosition(int position) {
         Toast.makeText(requireActivity(), position + "", Toast.LENGTH_LONG).show();
 
-        Log.i("DoctorTest", doctorProfile.get(position)+"");
+        DoctorModel result = doctorProfile.get(position);
+        Log.i("DoctorTest", result + "");
+
+        DoctorFragmentDirections.ActionNavDoctorToDoctorProfile action = DoctorFragmentDirections.actionNavDoctorToDoctorProfile(result);
+        navController.navigate(action);
     }
 }

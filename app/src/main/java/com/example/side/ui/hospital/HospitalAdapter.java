@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,10 +19,12 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.ViewHo
 
     String data[];
     Context context;
+    HospitalInterface hospitalInterface;
 
-    public HospitalAdapter(Context context, String[] data) {
+    public HospitalAdapter(String[] data, Context context, HospitalInterface hospitalInterface) {
         this.data = data;
         this.context = context;
+        this.hospitalInterface = hospitalInterface;
     }
 
     @NonNull
@@ -36,13 +39,7 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull com.example.side.ui.hospital.HospitalAdapter.ViewHolder holder, final int position) {
-        holder.textView.setText(data[position]);
-        holder.textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "clicked on"+data[position], Toast.LENGTH_SHORT).show();
-            }
-        });
+        holder.hospitalName.setText(data[position]);
 
     }
 
@@ -53,13 +50,21 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView textView;
-        ImageView imageView;
+        TextView hospitalName , hospitalAddress;
+        Button callHospital;
         public ViewHolder (@NonNull View itemView){
 
             super(itemView);
-            textView=itemView.findViewById(R.id.text);
-            imageView=itemView.findViewById(R.id.image);
+            hospitalName=itemView.findViewById(R.id.pharmacyName);
+            hospitalAddress = itemView.findViewById(R.id.pharmacyAddress);
+            callHospital = itemView.findViewById(R.id.callPharmacy);
+
+            callHospital.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    hospitalInterface.getHospitalPosition(getAdapterPosition());
+                }
+            });
 
         }
 

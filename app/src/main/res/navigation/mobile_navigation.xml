@@ -25,12 +25,20 @@
         android:id="@+id/nav_Volunteer"
         android:name="com.example.side.ui.volunteer.VolunteerFragment"
         android:label="@string/Volunteer"
-        tools:layout="@layout/fragment_volunteer" />
+        tools:layout="@layout/fragment_volunteer" >
+        <action
+            android:id="@+id/action_nav_Volunteer_to_medical_equipment"
+            app:destination="@id/medical_equipment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_patient"
         android:name="com.example.side.ui.patient.PatientFragment"
         android:label="@string/patient"
-        tools:layout="@layout/fragment_patient" />
+        tools:layout="@layout/fragment_patient" >
+        <action
+            android:id="@+id/action_nav_patient_to_nurse_profile"
+            app:destination="@id/nurse_profile" />
+    </fragment>
     <fragment
         android:id="@+id/nav_Pharmacies"
         android:name="com.example.side.ui.pharmacies.PharmaciesFragment"
@@ -76,5 +84,21 @@
         <argument
             android:name="DoctorProfileData"
             app:argType="com.example.side.ui.doctor.DoctorModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/nurse_profile"
+        android:name="com.example.side.ui.patient.nurse_profile"
+        android:label="nurse_profile" >
+        <argument
+            android:name="NurseModel"
+            app:argType="com.example.side.ui.patient.NurseModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/medical_equipment"
+        android:name="com.example.side.ui.volunteer.medical_equipment"
+        android:label="medical_equipment" >
+        <argument
+            android:name="VolunteerProfileData"
+            app:argType="com.example.side.ui.volunteer.VolunteerModel" />
     </fragment>
 </navigation>

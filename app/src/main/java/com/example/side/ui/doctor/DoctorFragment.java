@@ -44,7 +44,6 @@ public class DoctorFragment extends Fragment implements DoctorInterface {
 
     String name[] = {"Ali", "Hisham", "Mahdi", "Merna", "Mohamed", "Abe El-Mageed"};
     List<DoctorModel> doctorProfile = new ArrayList<DoctorModel>();
-    List<DoctorModel> doctorProfileDetails = new ArrayList<DoctorModel>();
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,

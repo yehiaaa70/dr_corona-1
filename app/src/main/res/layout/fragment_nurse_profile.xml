@@ -1,147 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#fff"
-    tools:context=".ui.volunteer.nurse_profile">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <data>
 
-        <ImageView
-            android:layout_width="52dp"
-            android:layout_height="22dp"
-            android:src="@drawable/bac"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
+    </data>
 
-            />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical"
+            tools:context=".ui.patient.nurse_profile">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/bac"
+
+                    />
 
 
-    </LinearLayout>
+            </LinearLayout>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="90dp"
-        android:src="@drawable/nurse"
-        android:layout_marginLeft="140dp"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_marginLeft="140dp"
+                android:src="@drawable/nurse"
 
 
-        />
+                />
 
-    <RatingBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:numStars="5"
-        android:stepSize="0.5"
-        android:layout_marginLeft="65dp"
-        android:layout_marginTop="18dp"
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="18dp"
+                android:numStars="5"
+                android:stepSize="0.5"
 
-        />
-    <TextView
-        android:paddingTop="8dp"
-        android:layout_width="283dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="15dp"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
-        android:hint="name"
-        android:textSize="18dp"
-        android:textColor="#878888"
-        android:background="@drawable/hints"
+                />
 
-        />
-    <TextView
-        android:paddingTop="8dp"
-        android:layout_width="283dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="15dp"
-        android:paddingLeft="25dp"
-        android:hint="phone or e-mail"
-        android:textSize="18dp"
-        android:textColor="#878888"
-        android:background="@drawable/hints"
+            <TextView
+                android:id="@+id/nurseName_nurseProfile"
+                android:layout_width="283dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/hints"
+                android:hint="name"
+                android:paddingLeft="25dp"
+                android:paddingTop="8dp"
+                android:paddingRight="25dp"
+                android:textColor="#878888"
+                android:textSize="18dp"
 
-        />
+                />
 
-    <TextView
-        android:paddingTop="8dp"
-        android:layout_width="283dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="15dp"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
-        android:hint="age"
-        android:numeric="decimal"
-        android:textSize="18dp"
-        android:textColor="#878888"
-        android:background="@drawable/hints"
+            <TextView
+                android:id="@+id/nursePhone_nurseProfile"
+                android:layout_width="283dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/hints"
+                android:hint="phone"
+                android:paddingLeft="25dp"
+                android:paddingTop="8dp"
+                android:textColor="#878888"
+                android:textSize="18dp"
 
-        />
-    <TextView
-        android:paddingTop="8dp"
-        android:layout_width="283dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="15dp"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
-        android:hint="address"
-        android:textSize="18dp"
-        android:textColor="#878888"
-        android:background="@drawable/hints"
+                />
 
-        />
+            <TextView
+                android:id="@+id/nurseAge_nurseProfile"
+                android:layout_width="283dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/hints"
+                android:hint="age"
+                android:numeric="decimal"
+                android:paddingLeft="25dp"
+                android:paddingTop="8dp"
+                android:paddingRight="25dp"
+                android:textColor="#878888"
+                android:textSize="18dp"
 
-    <TextView
-        android:paddingTop="8dp"
-        android:layout_width="283dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="15dp"
-        android:paddingRight="25dp"
-        android:hint="price"
-        android:numeric="decimal"
-        android:textSize="18dp"
-        android:textColor="#878888"
-        android:background="@drawable/hints"
+                />
 
-        />
+            <TextView
+                android:id="@+id/nurseAddress_nurseProfile"
+                android:layout_width="283dp"
 
-    <TextView
-        android:paddingTop="8dp"
-        android:layout_width="283dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
-        android:hint="day:            from:             to:"
-        android:scrollbarSize="30dp"
-        android:textSize="18dp"
-        android:textColor="#878888"
-        android:background="@drawable/hints"
+                android:layout_height="45dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/hints"
+                android:hint="address"
+                android:paddingLeft="25dp"
+                android:paddingTop="8dp"
+                android:paddingRight="25dp"
+                android:textColor="#878888"
+                android:textSize="18dp"
 
-        />
-    <TextView
-        android:paddingTop="8dp"
-        android:layout_width="283dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
-        android:hint=" hospital's address"
-        android:textSize="18dp"
-        android:textColor="#878888"
-        android:background="@drawable/hints"
+                />
 
-        />
-</LinearLayout>
+            <TextView
+                android:id="@+id/nursePrice_nurseProfile"
+                android:layout_width="283dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/hints"
+                android:hint="price"
+                android:numeric="decimal"
+                android:paddingTop="8dp"
+                android:paddingRight="25dp"
+                android:textColor="#878888"
+                android:textSize="18dp"
+
+                />
+
+            <TextView
+                android:id="@+id/booking_nurseProfile"
+                android:layout_width="283dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/hints"
+                android:hint="day:            from:             to:"
+                android:paddingLeft="25dp"
+                android:paddingTop="8dp"
+                android:paddingRight="25dp"
+                android:scrollbarSize="30dp"
+                android:textColor="#878888"
+                android:textSize="18dp"
+
+                />
+
+            <TextView
+                android:id="@+id/hospitalAddress_nurseProfile"
+                android:layout_width="283dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/hints"
+                android:hint=" hospital's address"
+                android:paddingLeft="25dp"
+                android:paddingTop="8dp"
+                android:paddingRight="25dp"
+                android:textColor="#878888"
+                android:textSize="18dp"
+
+                />
+        </LinearLayout>
+    </ScrollView>
+</layout>

@@ -4,42 +4,89 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.side.R;
-import com.example.side.ui.doctor.doctorAdapter;
+import com.example.side.databinding.FragmentVolunteerBinding;
 
-public class VolunteerFragment extends Fragment {
+import org.jetbrains.annotations.NotNull;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class VolunteerFragment extends Fragment implements VolunteerInterface {
 
     private VolunteerViewModel volunteerViewModel;
-    RecyclerView recyclerView;
-    volunteerAdapter adapter;
-    String name[]={"Mahmoud","Mariam","Farida","Omar","Hager","Islam","Zain","Shady","Shrouk","merna","mohab     "};
+    private RecyclerView recyclerView;
+    private volunteerAdapter adapter;
+    private String volunteersName[] = {"Noha", "Ahmed ", "Marina", "Tarek"};
+    private List<VolunteerModel> volunteerList = new ArrayList<VolunteerModel>();
+
+    private FragmentVolunteerBinding binding;
+    private NavController navController;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         volunteerViewModel =
                 new ViewModelProvider(this).get(VolunteerViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_volunteer, container, false);
+        binding = FragmentVolunteerBinding.inflate(inflater);
 
-        recyclerView=(RecyclerView) root.findViewById(R.id.rec);
+        recyclerView = binding.recVolunteer;
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        adapter=new volunteerAdapter(getActivity(),name);
+        adapter = new volunteerAdapter(volunteersName, requireActivity(), this);
 
         recyclerView.setAdapter(adapter);
 
 
+        return binding.getRoot();
+    }
 
-        return root;
+    @Override
+    public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        navController = Navigation.findNavController(view);
+
+        volunteerList.add(new VolunteerModel("Noha",
+                "011472087799",
+                60,
+                "المقطم ",
+                "450LE  انبوبة اكسجين "));
+
+        volunteerList.add(new VolunteerModel("Ahmed ",
+                "0114720876669",
+                30,
+                "الفيوم ",
+                " جهاز تنفس  350LE"));
+
+        volunteerList.add(new VolunteerModel("Marina",
+                "0114720876669",
+                30,
+                "الغربيه  ",
+                "350LE انبوبة اكسجين "));
+
+        volunteerList.add(new VolunteerModel("Tarek",
+                "011472088899",
+                45,
+                "مدينة نصر",
+                "450LE  جهاز تنفس"));
+    }
+
+    @Override
+    public void getVolunteerPosition(int position) {
+
+        VolunteerModel result = volunteerList.get(position);
+
+        VolunteerFragmentDirections.ActionNavVolunteerToMedicalEquipment action = VolunteerFragmentDirections.actionNavVolunteerToMedicalEquipment(result);
+        navController.navigate(action);
     }
 }
 

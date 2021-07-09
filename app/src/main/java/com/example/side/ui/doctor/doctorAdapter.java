@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -57,7 +56,7 @@ public class doctorAdapter extends RecyclerView.Adapter<doctorAdapter.ViewHolder
         public ViewHolder(@NonNull View itemView) {
 
             super(itemView);
-            textView = itemView.findViewById(R.id.text);
+            textView = itemView.findViewById(R.id.volunteerName);
             imageView = itemView.findViewById(R.id.image);
             textView.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -26,7 +26,6 @@ public class doctor_profile extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentDoctorProfileBinding.inflate(inflater);
 
-        binding.doctorNameDoctorProfile.setText("Ahmed");
         return binding.getRoot();
     }
 

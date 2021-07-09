@@ -55,7 +55,7 @@ public class patientAdapter extends RecyclerView.Adapter<com.example.side.ui.pat
         public ViewHolder(@NonNull View itemView) {
 
             super(itemView);
-            patientName = itemView.findViewById(R.id.text);
+            patientName = itemView.findViewById(R.id.volunteerName);
             imageView = itemView.findViewById(R.id.image);
 
             patientName.setOnClickListener(new View.OnClickListener() {

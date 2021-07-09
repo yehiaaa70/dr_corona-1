@@ -6,42 +6,37 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.side.R;
-import com.example.side.ui.doctor.doctorAdapter;
 
 public class volunteerAdapter extends RecyclerView.Adapter<volunteerAdapter.ViewHolder> {
 
     String data[];
     Context context;
+    VolunteerInterface volunteerInterface;
 
-    public volunteerAdapter(Context context, String[] data) {
+    public volunteerAdapter(String[] data, Context context, VolunteerInterface volunteerInterface) {
         this.data = data;
         this.context = context;
+        this.volunteerInterface = volunteerInterface;
     }
 
     @NonNull
     @Override
-    public volunteerAdapter.ViewHolder  onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater layoutInflater =LayoutInflater.from(parent.getContext());
-        View view=layoutInflater.inflate(R.layout.custome_design,parent,false);
-        ViewHolder viewHolder=new ViewHolder(view);
+    public volunteerAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+        View view = layoutInflater.inflate(R.layout.custome_design, parent, false);
+        ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull volunteerAdapter.ViewHolder holder, int position) {
-        holder.textView.setText(data[position]);
-        holder.textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "clicked on"+data[position], Toast.LENGTH_SHORT).show();
-            }
-        });
+        holder.volunteerName.setText(data[position]);
+
 
     }
 
@@ -50,15 +45,22 @@ public class volunteerAdapter extends RecyclerView.Adapter<volunteerAdapter.View
         return data.length;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView textView;
-        ImageView imageView;
-        public ViewHolder (@NonNull View itemView){
+        public TextView volunteerName;
+
+        public ViewHolder(@NonNull View itemView) {
 
             super(itemView);
-            textView=itemView.findViewById(R.id.text);
-            imageView=itemView.findViewById(R.id.image);
+            volunteerName = itemView.findViewById(R.id.volunteerName);
+
+            volunteerName.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    volunteerInterface.getVolunteerPosition(getAdapterPosition());
+                }
+            });
+
 
         }
 

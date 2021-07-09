@@ -15,7 +15,7 @@
             android:title="Volunteer" />
         <item
             android:id="@+id/nav_patient"
-            android:title="patient" />
+            android:title="Nurse" />
         <item
             android:id="@+id/nav_Pharmacies"
             android:title="Pharmacies" />

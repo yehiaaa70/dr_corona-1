@@ -11,6 +11,9 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+     <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
 
     <application
         android:allowBackup="true"
@@ -56,7 +59,6 @@
         <activity android:name=".ui.logout.register" />
         <activity android:name=".ui.logout.login"></activity>
         <activity android:name=".ui.home.critical_issues" />
-        <activity android:name=".ui.scannerView" />
     </application>
 
 </manifest>

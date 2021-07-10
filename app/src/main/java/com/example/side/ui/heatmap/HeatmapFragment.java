@@ -82,7 +82,7 @@ public class HeatmapFragment extends Fragment {
                 }
                 googleMap.setMyLocationEnabled(true);
 
-                googleMap.setTrafficEnabled(true);
+               // googleMap.setTrafficEnabled(true);
             }
         });
 
@@ -100,11 +100,13 @@ public class HeatmapFragment extends Fragment {
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable @org.jetbrains.annotations.Nullable QuerySnapshot queryDocumentSnapshots, @Nullable @org.jetbrains.annotations.Nullable FirebaseFirestoreException e) {
+
                         for (DocumentSnapshot snapshot : queryDocumentSnapshots.getDocuments()) {
+
                             LocationsModel locationsModel = snapshot.toObject(LocationsModel.class);
                             Log.i(TAG, "onEvent: " + locationsModel.toString());
 
-                            LatLng latLng = new LatLng(locationsModel.getLatitude(), locationsModel.getLongitude());
+                           LatLng latLng = new LatLng(locationsModel.getLatitude() , locationsModel.getLongitude());
 
                             MarkerOptions markerOptions = new MarkerOptions()
                                     .position(latLng);

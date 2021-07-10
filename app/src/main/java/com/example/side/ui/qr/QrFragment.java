@@ -29,16 +29,7 @@ public class QrFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_qr, container, false);
 
-        Button scanbtn =( Button) view.findViewById(R.id.scanbtn) ;
-        scanbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Intent inn=new Intent(getActivity(),com.example.side.ui.scannerView.class);
-                startActivity(inn);
-            }
-
-        });
 
 
 

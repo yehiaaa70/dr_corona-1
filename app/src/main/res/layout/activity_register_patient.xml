@@ -19,21 +19,14 @@
             android:orientation="vertical"
             tools:context=".ui.logout.register_patient">
 
-            <ImageView
-                android:layout_width="52dp"
-                android:layout_height="22dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:src="@drawable/bac"
 
-                />
 
 
             <ImageView
                 android:layout_width="155dp"
                 android:layout_height="90dp"
                 android:layout_marginLeft="110dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="60dp"
                 android:src="@drawable/patient"
 
 

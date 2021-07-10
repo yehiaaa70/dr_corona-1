@@ -22,13 +22,14 @@ public class HomeFragment extends Fragment {
         homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        ImageView i =(ImageView) view.findViewById(R.id.critical) ;
-        i.setOnClickListener(new View.OnClickListener() {
+
+     View i2 =(View) view.findViewById(R.id.critical2) ;
+        i2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent in=new Intent(getActivity(), critical_issues.class);
-                startActivity(in);
+                Intent in2=new Intent(getActivity(), critical_issues.class);
+                startActivity(in2);
             }
 
         });

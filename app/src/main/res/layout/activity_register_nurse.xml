@@ -23,23 +23,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <ImageView
-                    android:layout_width="52dp"
-                    android:layout_height="22dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"
-                    android:src="@drawable/bac"
 
-                    />
 
 
             </LinearLayout>
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="90dp"
-                android:layout_marginLeft="140dp"
-                android:layout_marginTop="40dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="60dp"
                 android:src="@drawable/nurse"
 
 
@@ -50,9 +43,9 @@
                 android:layout_width="283dp"
                 android:layout_height="45dp"
                 android:layout_marginLeft="55dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="50dp"
                 android:background="@drawable/hints"
-                android:hint="age"
+                android:text="age :   "
                 android:numeric="decimal"
                 android:paddingLeft="25dp"
                 android:paddingRight="25dp"
@@ -67,7 +60,7 @@
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/hints"
-                android:hint="address"
+                android:text="address :   "
                 android:paddingLeft="25dp"
                 android:paddingRight="25dp"
                 android:textColor="#878888"
@@ -81,7 +74,7 @@
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/hints"
-                android:hint="price"
+                android:text="price :   "
                 android:numeric="decimal"
                 android:paddingLeft="25dp"
                 android:paddingRight="25dp"
@@ -96,7 +89,9 @@
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/hints"
-                android:hint="day:            from:             to:"
+                android:text="day :
+                 from:
+          to :"
                 android:paddingLeft="25dp"
                 android:paddingRight="25dp"
                 android:scrollbarSize="30dp"
@@ -111,7 +106,7 @@
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/hints"
-                android:hint=" hospital's address"
+                android:text="hospital's address :   "
                 android:paddingLeft="25dp"
                 android:paddingRight="25dp"
                 android:textColor="#878888"

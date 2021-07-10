@@ -23,6 +23,7 @@
                 android:layout_width="370dp"
                 android:layout_height="120dp"
                 android:layout_marginTop="80dp"
+                android:layout_marginLeft="20dp"
                 android:src="@drawable/logo"
 
                 />
@@ -31,11 +32,11 @@
             <EditText
                 android:layout_width="283dp"
                 android:layout_height="45dp"
-                android:layout_marginLeft="55dp"
+                android:layout_marginLeft="65dp"
                 android:layout_marginTop="100dp"
                 android:paddingLeft="25dp"
                 android:paddingRight="25dp"
-                android:hint="phone or e-mail"
+                android:hint="phone "
                 android:inputType="textEmailAddress"
                 android:textSize="18dp"
                 android:textColorHint="#878888"
@@ -46,7 +47,7 @@
             <EditText
                 android:layout_width="283dp"
                 android:layout_height="45dp"
-                android:layout_marginLeft="55dp"
+                android:layout_marginLeft="65dp"
                 android:paddingLeft="25dp"
                 android:paddingRight="25dp"
                 android:layout_marginTop="30dp"
@@ -61,8 +62,8 @@
             <Button
                 android:layout_width="283dp"
                 android:layout_height="45dp"
-                android:layout_marginLeft="55dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="45dp"
                 android:text="sign in"
                 android:textSize="18dp"
                 android:textColor="#fff"

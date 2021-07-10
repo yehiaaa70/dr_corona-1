@@ -91,7 +91,7 @@ public class register_patient extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == LOCATION_REQUEST_CODE) {
             if (permissions.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
+                Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -107,6 +107,7 @@ public class register_patient extends AppCompatActivity {
             public void onSuccess(Location location) {
                 if (location != null) {
                     addUserLocationToFirebase(location);
+
                     Log.i(TAG, "onSuccess: " + location.toString());
 
                     Log.i(TAG, "onSuccess lat: " + location.getLatitude());
@@ -159,6 +160,7 @@ public class register_patient extends AppCompatActivity {
         usersDate.put("Longitude", location.getLongitude());
         usersDate.put("User_id", auth.getUid());
         if (auth.getUid() != null) {
+
             firebaseFirestore.collection("UsersLocation")
                     .document(auth.getUid())
                     .set(usersDate).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -167,6 +169,13 @@ public class register_patient extends AppCompatActivity {
                     binding.progressBar.setVisibility(View.GONE);
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(register_patient.this, e.getMessage(), Toast.LENGTH_LONG).show();
+
+                    Log.i(TAG, "onFailure: " + e.getMessage());
                 }
             });
         }

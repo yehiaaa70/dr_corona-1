@@ -27,7 +27,7 @@ public class VolunteerFragment extends Fragment implements VolunteerInterface {
     private VolunteerViewModel volunteerViewModel;
     private RecyclerView recyclerView;
     private volunteerAdapter adapter;
-    private String volunteersName[] = {"Noha", "Ahmed ", "Marina", "Tarek"};
+    private String volunteersName[] = {"oxygen tank", "mask ", "oxygen tank", "mask"};
     private List<VolunteerModel> volunteerList = new ArrayList<VolunteerModel>();
 
     private FragmentVolunteerBinding binding;

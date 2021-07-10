@@ -40,7 +40,9 @@ public class medical_equipment extends Fragment {
             binding.volunteerPhone.setText(args.getVolunteerProfileData().getVolunteerPhone());
             binding.volunteerAge.setText(String.valueOf(args.getVolunteerProfileData().getVolunteerAge()));
             binding.volunteerAddress.setText(args.getVolunteerProfileData().getVolunteerAddress());
-            binding.volunteerItemNamePrice.setText(args.getVolunteerProfileData().getVolunteer_itemName_price());
+            binding.volunteeritem.setText(args.getVolunteerProfileData().getVolunteer_itemName_price());
+            binding.volunteerprice.setText(args.getVolunteerProfileData().getVolunteer_itemName_price());
+
         }
     }
 }
